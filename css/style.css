@@ -1,0 +1,253 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Général */
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --titlefont:"Playfair Display", serif;
+    --primaryfont:"Inter", sans-serif;
+    --abricot:rgba(252, 208, 161);
+    --sauge:rgb(177, 182, 149);
+    --black:rgba(51, 51, 51, 1);
+    --white:rgba(255, 255, 255, 1);
+}
+
+h1,h2{
+    font-family:var(--titlefont); 
+    font-size: 60px;
+    font-weight: 700; 
+    }
+
+p{
+    font-family: var(--primaryfont);
+    font-size: 24px;  
+    font-weight: 400;
+    color: var(--black);
+}
+
+.container{
+    max-width: 1536px;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--primaryfont);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+i{
+    color: var(--abricot);
+}
+
+/* Desktop */
+/* Header */
+header{
+    
+    background-color: var(--sauge);
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+
+        p{
+            font-family: var(--titlefont);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--abricot);
+        }
+
+        nav{
+            ul{
+                display: flex;
+                gap: 25px;
+                padding: 0;
+
+                li{
+                    list-style: none;
+
+                    a{
+                        color:var(--abricot);
+                        font-family: var(--primaryfont);
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    #principale{
+        position: relative;
+
+        &::before{
+            content: "";
+            background-color: rgba(252, 208, 161, 0.3);
+            position: absolute;
+            inset: 0;
+        }
+
+        #back{
+            height: 1200px;
+        }
+
+        .container{
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            justify-items: center;
+            position: relative;
+            bottom: 60em;
+            padding: 25px;
+
+            div{
+                display: grid;
+                gap: 20px;
+
+                h1,p{
+                    color: var(--black);
+                }                
+            }
+
+            a{
+                background-color: var(--sauge);
+                width: fit-content;
+                padding: 12px 28px;
+                border-radius: 5px;
+            }
+        }
+
+        #personne{
+            height: auto;
+            width: 60%;
+            border-radius: 100%;
+        }
+        /* Attention aux dimensions de l'image */
+    }
+}
+
+footer{
+    background-color: var(--sauge);
+    color: var(--white);
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 15px;
+
+        div{
+            h2{
+                font-size: 24px;
+            }
+
+            p{
+                font-size: 16px;
+                color: var(--white);
+                margin: 15px 0;
+            }
+
+            #droits{
+                font-size: 14px;
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                gap: 15px;
+                justify-content: flex-end;
+
+                i{
+                    font-size: 40px;
+                }
+            }
+            
+
+        }
+    }
+    
+}
+/* Tablette (1024px jusqu'à 768px) */
+@media screen and (max-width:1024px){
+    main{
+        #principale{
+
+        }
+    }
+}
+
+/* Mobile (dès 767px) */
+@media screen and (max-width:767px){
+    header{
+        .container{
+            flex-direction: column;
+            gap: 25px;
+
+            nav{
+                ul{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            }           
+        }
+
+        p{
+            text-align: center;
+        }
+        
+        nav{
+            ul{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+
+            li{
+                    text-align: center;
+            }
+            }
+        }
+        
+    }
+
+    main{
+        #principale{
+            .container{
+                grid-template-columns: 1fr;
+                gap: 40px;
+
+                #personne{
+                    width: 100%;
+                }
+                
+            }
+        }
+        
+    }
+
+    footer{
+        .container{
+            flex-direction: column;
+            div{
+                ul{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
