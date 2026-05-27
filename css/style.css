@@ -50,7 +50,6 @@ a{
     font-family: var(--primaryfont);
     font-size: 16px;
     font-weight: 600;
-    color: var(--white);
 }
 
 i{
@@ -62,15 +61,14 @@ button{
     font-family: var(--primaryfont);
     font-size: 16px;
     font-weight: 700;
-
-    
 }
 
 /* Desktop */
 /* Header */
 header{
-    
     background-color: var(--sauge);
+    position: sticky;
+    top: 0;
 
     .container{
         display: flex;
@@ -116,7 +114,7 @@ header{
 
 main{
     #principale{
-        position: relative;
+        /* position: relative; */
         display: grid;
         background-image: url("../img/pexels-olha-ruskykh-5984630.jpg");
         background-size: cover;
@@ -158,6 +156,7 @@ main{
                         width: fit-content;
                         padding: 12px 28px;
                         border-radius: 5px;
+                        color: var(--white);
 
                         &:hover{
                             background-color: var(--abricot);
@@ -251,7 +250,7 @@ main{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 40px;
-                margin: 30px 0;
+                padding: 30px 0;
 
                 a{
                     border-radius: 10px;
@@ -270,10 +269,10 @@ main{
                             border-radius:  10px 10px 0 0;
                             transition:all 0.2s ease-in-out;
                             &:hover{
-                            img{
-                                transition:scale(1.05);
-                                transition:all 0.2s ease-in-out;
-                            }
+                                img{
+                                    transition:scale(1.05);
+                                    transition:all 0.2s ease-in-out;
+                                }
                             }
                         }
 
@@ -301,7 +300,8 @@ main{
                                 li{
                                     background-color: var(--sauge);
                                     padding: 7px;
-                                    border-radius: 4px
+                                    border-radius: 4px;
+                                    color:var(--white);
                                 }
                             }
 
@@ -325,10 +325,17 @@ main{
                 font-size: 16px;
                 font-weight: 700;
 
+                a{
+                    color: var(--sauge);
+                }
+
                 &:hover{
                     background-color: var(--abricot);
                     cursor: pointer;
-                    color: var(--white);
+                    
+                    a{
+                        color: var(--white);
+                    }
                 }
             }
         }
