@@ -106,6 +106,10 @@ header{
                     }
                 }
             }
+
+            i{
+                display: none;
+            }
         }
     }
 }
@@ -451,32 +455,18 @@ footer{
 @media screen and (max-width:767px){
     header{
         .container{
-            flex-direction: column;
-            gap: 25px;
-
             nav{
                 ul{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    display: none;
                 }
-            }           
-        }
 
-        p{
-            text-align: center;
-        }
-        
-        nav{
-            ul{
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-
-            li{
-                    text-align: center;
+                i{
+                    display: block;
+                    font-size: 30px;
+                    color: white;
+                }   
             }
-            }
-        }
-        
+        }           
     }
 
     main{
