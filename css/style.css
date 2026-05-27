@@ -17,9 +17,10 @@
     --white:rgba(255, 255, 255, 1);
 }
 
-h1,h2{
+h2{
     font-family:var(--titlefont); 
-    font-weight: 700; 
+    font-weight: 700;
+    font-size: 36px;
     }
 
 h3{
@@ -31,6 +32,7 @@ h3{
 p{
     font-family: var(--primaryfont);  
     font-weight: 400;
+    font-size: 18px;
 }
 
 .container{
@@ -52,7 +54,14 @@ a{
 }
 
 i{
-    color: var(--abricot);
+    color: var(--sauge);
+}
+
+button{
+    border-style: none;
+    font-family: var(--primaryfont);
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /* Desktop */
@@ -67,11 +76,11 @@ header{
         align-items: center;
         padding: 25px;
 
-        p{
+        a,p{
             font-family: var(--titlefont);
             font-size: 24px;
             font-weight: 700;
-            color: var(--abricot);
+            color: var(--white);
         }
 
         nav{
@@ -84,10 +93,14 @@ header{
                     list-style: none;
 
                     a{
-                        color:var(--abricot);
+                        color:var(--white);
                         font-family: var(--primaryfont);
-                        font-size: 16px;
+                        font-size: 20px;
                         font-weight: 500;
+
+                        &:hover{
+                            color: var(--abricot);
+                        }
                     }
                 }
             }
@@ -98,10 +111,13 @@ header{
 main{
     #principale{
         position: relative;
+        display: grid;
+        background-image: url("../img/pexels-olha-ruskykh-5984630.jpg");
+        background-size: cover;
 
         &::before{
             content: "";
-            background-color: rgba(252, 208, 161, 0.3);
+            background-color: rgba(252, 208, 161, 0.1);
             position: absolute;
             inset: 0;
         }
@@ -113,19 +129,26 @@ main{
         .container{
             display: grid;
             align-items: center;
+            justify-items: center;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            justify-items: center;
+            height: 1040px;
+            padding: 0 20px;
+
+            /* justify-items: center;
             position: absolute;
             right: 5%;
             bottom:37%;
-            padding: 25px;
+            padding: 25px; */
+            
 
-            div{
+            article{
                 display: grid;
                 gap: 25px;
 
                 h1{
+                    font-family:var(--titlefont); 
+                    font-weight: 700;
                     font-size: 60px;
                     color: var(--black);
                 }
@@ -140,6 +163,10 @@ main{
                 width: fit-content;
                 padding: 12px 28px;
                 border-radius: 5px;
+
+                &:hover{
+                    color: var(--abricot);
+                }
             }
         }
 
@@ -152,18 +179,20 @@ main{
     }
 
     .propos{
-        padding: 40px;
+        padding: 50px;
 
         h2{
             text-align: center;
             margin: 35px 0;
         }
 
-        div{
+        p{
+            word-spacing: 10px;
+        }
+
+        #parcours_competences{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            /* align-items: center; */
-            /* justify-items: center; */
             gap: 30px;
 
             article{
@@ -175,15 +204,15 @@ main{
                     text-align: center;
                 }
 
-                p{
-                    font-size: 16px;
-                }
-
                 a{
                     display: flex;
                     align-items: center;
                     color: var(--sauge);
                     gap: 15px;
+
+                    &:hover{
+                        color: var(--abricot);
+                    }
 
                     i{
                         color: var(--sauge);
@@ -191,26 +220,25 @@ main{
                     }
                 }
 
-                div{
+                #mes-competences{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 20px;
+                }
+
                     article{
-                        display: grid;
                         justify-items: center;
-                        /* p{
-                            color: var(--abricot);
-                        } */
 
                         i{
                             font-size: 48px;
                         }
                     }
                 }
-
             }
-        }
     }
 
     #mes-projets-recents{
-        background-color: var(--abricot);
+        background-color: var(--sauge);
         padding: 40px 15px;
 
         .container{
@@ -228,24 +256,42 @@ main{
                 margin: 30px 0;
 
                 a{
+                    border-radius: 10px;
+                    padding: 0;
+
+                    
                     .card{
                         background-color: var(--white);
                         border-radius: 10px;
                         display: grid;
                         gap: 10px;
+                        box-shadow: 9px 8px 5px #80808047;
 
                         img{
                             height: 256px;
                             border-radius:  10px 10px 0 0;
+                            transition:all 0.2s ease-in-out;
+                            &:hover{
+                            img{
+                                transition:scale(1.05);
+                                transition:all 0.2s ease-in-out;
+                            }
+                            }
                         }
 
                         .info-zone{
-                            padding: 0 8px;
+                            padding: 0 12px;
                             display: grid;
 
-                            h3, p{
+                            h3{
                                 text-align: justify;
                                 color: var(--black);
+                            } 
+                            
+                            p{
+                                text-align: justify;
+                                color: var(--black);
+                                font-size: 16px;
                             }
 
                             ul{
@@ -261,12 +307,93 @@ main{
                                 }
                             }
 
-                            a{
-
+                            .link{
+                                color: var(--sauge);
+                                font-weight: 700;
                             }
                         }
+                        
+                    }
+                    
+                }
+            }
+
+            button{
+                background-color: var(--white);
+                color: var(--sauge);
+                padding: 14px;
+                border-radius: 4px;
+                font-family: var(--primaryfont);
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .contact{
+        text-align: center;
+        max-width: 670px;
+        margin: auto;
+        padding: 30px 15px;
+
+        h2{
+            margin: 30px 0;
+        }
+
+        form{
+            text-align: justify;
+
+            #champ{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin: 30px 0;
+            
+                article{
+                    display: grid;
+                    gap: 5px;
+
+                    label{
+                        font-family: var(--primaryfont);
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-left: 3px;
+                        color: var(--sauge);
+                    }
+
+                    input{
+                        border: 1px solid var(--sauge);
+                        padding: 16px;
+                        border-radius: 8px;
                     }
                 }
+
+                #message{
+                    grid-column: 1/3;
+
+                    input{
+                        height: 150px;
+                    }
+                }
+            }
+        
+
+            div{
+                label{
+                    font-family: var(--primaryfont);
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                
+            }
+
+            button{
+                background-color: var(--sauge);
+                color: var(--white);
+                width: fit-content;
+                padding: 12px 28px;
+                border-radius: 5px;
+                margin:12px 0;
             }
         }
     }
@@ -305,6 +432,7 @@ footer{
 
                 i{
                     font-size: 40px;
+                    color:var(--white);
                 }
             }
             
@@ -356,6 +484,13 @@ footer{
             .container{
                 grid-template-columns: 1fr;
                 gap: 40px;
+                text-align: center;
+
+                article{
+                    a{
+                        justify-self: center;
+                    }
+                }
 
                 #personne{
                     width: 100%;
@@ -365,7 +500,7 @@ footer{
         }
         
         .propos{
-            div{
+            #parcours_competences{
                 grid-template-columns: 1fr;
 
                 article{
@@ -380,6 +515,18 @@ footer{
             .container{
                 #cards{
                     grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        .contact{
+            form{
+                #champ{
+                    grid-template-columns: 1fr;
+
+                    #message{
+                        grid-column: 1/1;
+                    }
                 }
             }
         }

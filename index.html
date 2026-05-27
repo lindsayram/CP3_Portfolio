@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="container">
-            <p>Lindsay Ramassy</p>
+            <a href="/">Lindsay Ramassy</a>
             <nav>
                 <ul>
                     <li><a href="">Accueil</a></li>
@@ -24,32 +24,31 @@
 
     <main>
         <section id="principale">
-            <img src="img/pexels-olha-ruskykh-5984630.jpg" alt="des oridinateurs" id="back">
             <div class="container">
-                <div>
+                <article>
                     <h1>Lindsay Ramassy</h1>
                     <p>En cours de formation pour devenir Développeuse Web Front-End & Designer UI/UX</p>
                     <p>Je crée des expériences web élégantes, intuitives et performantes avec une attention particulière aux détails.</p>
-                <a href="#projets">Voir mes projets</a>
-                </div>
+                    <a href="#projets">Voir mes projets</a>
+                </article>
                 <img src="img/pers2.jpg" alt="personne" id="personne"> <!-- Ajouter une photo de moi -->
             </div>
-            
         </section>
 
         <section class="propos container">
             <h2>A propos de moi</h2>
-            <div>
+            <div id="parcours_competences">
                 <article>
                     <h3>Mon parcours</h3>
                     <p>Bientôt diplômée en développement web et web mobile, je combine des compétences
                     techniques solides avec une sensibilité esthétique pour créer des sites web et applications qui sont à la fois fonctionnels et visuellement attrayants.</p>
                     <p>Je suis passionnée par les technologies web modernes et je m'efforce constamment d'améliorer mes compétences pour rester à la pointe des dernières tendances et meilleures pratiques.</p>
                     <a href="#">En savoir plus sur mon parcours<i class="fa-solid fa-arrow-right-long"></i></a>
+                    <!-- pourquoi la flèche ne change pas de couleur? -->
                 </article>
                 <article>
                     <h3>Mes compétences</h3>
-                    <div>
+                    <div id="mes-competences">
                         <article>
                             <i class="fa-brands fa-html5"></i>
                             <p>HTML5</p>
@@ -65,6 +64,10 @@
                         <article>
                             <i class="fa-regular fa-circle"></i>
                             <p>Responsive</p>
+                        </article>
+                        <article>
+                            <i class="fa-brands fa-figma"></i>
+                            <p>Figma</p>
                         </article>
                     </div>
                 </article>
@@ -87,7 +90,7 @@
                                     <li>CSS3</li>
                                     <li>Responsive</li>
                                 </ul>
-                                <p>Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></p>
+                                <p class="link">Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></p>
                             </div>
                         </article>
                     </a>
@@ -102,14 +105,40 @@
                                     <li>CSS3</li>
                                     <li>Responsive</li>
                                 </ul>
-                                <p>Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></p>
+                                <p class="link">Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></p>
                             </div>
                         </article>
                     </a>
                 </div>
+                <button>Voir tous les projets</button>
             </div>
         </section>
-        <section></section>
+
+        <section class="contact">
+            <h2>Contactez-moi</h2>
+            <p>Vous avez un projet en tête ou une question ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.</p>
+            <form action="#">
+                <div id="champ">
+                    <article>
+                        <label for="name">Nom</label>
+                        <input type="text" required>
+                    </article>
+                    <article>
+                        <label for="email">Email</label>
+                        <input type="text" required>
+                    </article>
+                    <article id="message">
+                        <label for="message">Message</label>
+                        <input type="text" required>
+                    </article>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="accept">J'accepte que mes données soient traitées conformément à la politique de confidentialité. Elles ne seront utilisées que pour répondre à ma demande.</label>
+                </div>
+                <button>Envoyer</button>
+            </form>
+        </section>
     </main>
 
     <footer>
