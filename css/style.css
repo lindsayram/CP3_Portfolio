@@ -12,7 +12,7 @@
 :root{
     --titlefont:"Playfair Display", serif;
     --primaryfont:"Inter", sans-serif;
-    --abricot:rgb(252, 208, 161);
+    --foret:rgb(33, 78, 52);
     --sauge:rgb(177, 182, 149);
     --black:rgba(51, 51, 51, 1);
     --white:rgba(255, 255, 255, 1);
@@ -28,7 +28,7 @@ h2{
     font-family:var(--titlefont); 
     font-weight: 700;
     font-size: 36px;
-    }
+}
 
 h3{
     font-family: var(--titlefont);
@@ -64,6 +64,14 @@ button{
     font-family: var(--primaryfont);
     font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        transform: scale(1.02);
+        background-color: var(--foret);
+        transition: all 0.2s ease-in-out;
+    }
 }
 
 .mes-competences{
@@ -88,6 +96,7 @@ header{
     background-color: var(--sauge);
     position: sticky;
     top: 0;
+    z-index: 1;
 
     .container{
         display: flex;
@@ -109,15 +118,25 @@ header{
 
                 li{
                     list-style: none;
+                    transition: all 0.2s ease-in-out;
+
+
+                    &:hover{
+                            transform: scale(1.02);
+                            transition: all 0.2s ease-in-out;
+                        }
 
                     a{
                         color:var(--white);
                         font-family: var(--primaryfont);
                         font-size: 20px;
                         font-weight: 500;
+                        transition: all 0.2s ease-in-out;
 
                         &:hover{
-                            color: var(--abricot);
+                            color: var(--foret);
+                            transform: scale(1.02);
+                            transition: all 0.2s ease-in-out;
                         }
                     }
                 }
@@ -168,10 +187,12 @@ main{
                         padding: 12px 28px;
                         border-radius: 5px;
                         color: var(--white);
+                        transition: all 0.2s ease-in-out;
 
                         &:hover{
-                            background-color: var(--abricot);
-                            cursor: pointer;
+                            background-color: var(--foret);
+                            transform: scale(1.02);
+                            transition: all 0.2s ease-in-out;
                         }
                     }               
                 }
@@ -208,6 +229,11 @@ main{
                     .mes-competences{
                         li{
                             color: var(--black);
+                            gap: 20px;
+                            font-family: var(--primaryfont);  
+                            font-weight: 400;
+                            font-size: 18px;
+
                             i{
                                 color: var(--white);
                             }
@@ -220,6 +246,7 @@ main{
 
     .experiences-pro{
         margin: 40px auto;
+        padding: 0 20px;
 
         h2{
             text-align: center;
@@ -270,7 +297,7 @@ main{
 /* Fin page about.html */
 
     .propos{
-        padding: 50px;
+        padding: 40px;
 
         h2{
             text-align: center;
@@ -299,9 +326,11 @@ main{
                     align-items: center;
                     color: var(--sauge);
                     gap: 15px;
+                    transition: all 0.2s ease-in-out;
 
                     &:hover{
-                        color: var(--abricot);
+                        color: var(--foret);
+                        transition: all 0.2s ease-in-out;
                     }
 
                     i{
@@ -311,9 +340,16 @@ main{
                 }
 
                 .mes-competences{
-                    i{
-                        color: var(--sauge);
-                        font-size: 48px;
+                    li{
+                        gap: 20px;
+                        font-family: var(--primaryfont);  
+                        font-weight: 400;
+                        font-size: 18px;
+
+                        i{
+                            color: var(--sauge);
+                            font-size: 48px;
+                        }
                     }
                 }
             }
@@ -348,24 +384,25 @@ main{
                         gap: 10px;
                         box-shadow: 9px 8px 5px #80808047;
                         height: 100%;
+                        overflow: hidden;
 
                         img{
                             height: 256px;
                             border-radius:  10px 10px 0 0;
                             transition:all 0.2s ease-in-out;
-                            
-                            &:hover{
+                        }
+
+                        &:hover{
                                 img{
-                                    transition:scale(1.05);
+                                    transform: scale(1.02);
                                     transition:all 0.2s ease-in-out;
                                 }
                             }
-                        }
 
                         .info-zone{
                             display: grid;
                             justify-items: flex-start;
-                            gap: 10px;
+                            gap: 13px;
                             padding: 10px;
 
                             h3{
@@ -389,12 +426,21 @@ main{
                                     padding: 7px;
                                     border-radius: 4px;
                                     color:var(--white);
+                                    font-family: var(--primaryfont);  
+                                    font-weight: 400;
+                                    font-size: 18px;
                                 }
                             }
 
                             a{
                                 color: var(--sauge);
                                 font-weight: 700;
+                                transition: all 0.2s ease-in-out;
+
+                                &:hover{
+                                    transform: scale(1.02);
+                                    color: var(--foret);
+                                }
                             }
                         }
                         
@@ -418,7 +464,7 @@ main{
                 }
 
                 &:hover{
-                    background-color: var(--abricot);
+                    background-color: var(--foret);
                     
                     a{
                         color: var(--white);
@@ -537,12 +583,17 @@ main{
                 padding: 12px 28px;
                 border-radius: 5px;
                 margin:12px 0;
+
+                &:hover{
+                    background-color: var(--foret);
+                }
             }
         }
     }
 
 /* Pages plantint.html et johndoe.html */
     .projet-details{
+        
         >div{
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -550,26 +601,68 @@ main{
             align-items: center;
             justify-items: center;
             margin: 30px 0;
+            padding: 0 15px;
 
             img{
-                /* height: 300px;
-                width: 300px;
-                border-radius: 100%; */
+                border-radius: 7px;
+                border: 2px solid var(--sauge);
             }
         }
     }
 
     #competences-mobilises{
         background-color: var(--sauge);
+        padding: 30px;
 
         h2{
             text-align: center;
+            margin-bottom: 30px;
         }
 
         .mes-competences{
+            padding: 30px;
+
+            li{
+                gap: 20px;
+                font-family: var(--primaryfont);  
+                font-weight: 400;
+                font-size: 18px;
+
                 i{
-                    font-size: 30px;
+                    font-size: 40px;
                 }
+            }
+        }
+    }
+
+    .apercu{
+        margin: 50px auto;
+
+        h2{
+            margin: 20px;
+            text-align: center;
+        }
+
+        div{
+            display: flex;
+            gap: 30px;
+            padding: 0 10px;
+
+            article{
+                background-color: var(--sauge);
+                border:3px solid var(--sauge);
+                border-radius: 10px;
+
+                img{
+                  border-radius: 10px;
+                  height: 254px;  
+                }
+
+                h3{
+                    padding: 10px;
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -589,8 +682,11 @@ footer{
         padding: 50px 15px;
 
         div{
-            h2{
+            a{
+                font-family: var(--titlefont);
                 font-size: 24px;
+                font-weight: 700;
+                color: var(--white);
             }
 
             p{
@@ -622,8 +718,19 @@ footer{
 }
 /* Tablette (1024px jusqu'à 768px) */
 @media screen and (max-width:1024px){
-    /* main{
-    } */
+    main{
+        .projet-details{
+            >div{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #competences-mobilises{
+            .mes-competences{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
 }
 
 /* Mobile (dès 767px) */
@@ -660,7 +767,7 @@ footer{
         }
         /* Page about.html */
         .experiences-pro{
-            margin: 20px;
+            margin: 20px 0;
 
             .content-icone{
                 grid-template-columns: 1fr;
@@ -706,6 +813,12 @@ footer{
                         grid-column: 1/1;
                     }
                 }
+            }
+        }
+
+        .apercu{
+            div{
+                flex-direction: column;
             }
         }
     }
