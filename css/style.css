@@ -172,7 +172,7 @@ main{
         padding: 25px 0;
 
         .container{
-            height: 500px;
+            height: auto;
         }
     }
 
@@ -199,7 +199,7 @@ main{
     }
 
     .experiences-pro{
-        margin: 40px;
+        margin: 40px auto;
 
         h2{
             text-align: center;
@@ -426,10 +426,7 @@ main{
             #cards{
                 .card{
                     background-color: var(--sauge);
-
-                    img{
-                        border:3px solid var(--sauge);
-                    } 
+                    border:3px solid var(--sauge); 
 
                     .info-zone{
 
@@ -606,7 +603,7 @@ footer{
         .principale{
             .container{
                 grid-template-columns: 1fr;
-                gap: 0;
+                gap: 30px;
                 text-align: center;
 
                 article{
