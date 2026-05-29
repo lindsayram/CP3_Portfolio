@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li><a href="/">Accueil</a></li>
-                    <li><a href="">A propos</a></li>
+                    <li><a href="about.html">A propos</a></li>
                     <li><a href="projects.html">Projets</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -24,17 +24,15 @@
     </header>
 
     <main>
-        <section id="principale">
-            <div>
-                <div class="container">
-                    <article>
-                        <h1>Lindsay Ramassy</h1>
-                        <p>En cours de formation pour devenir Développeuse Web Front-End & Designer UI/UX</p>
-                        <p>Je crée des expériences web élégantes, intuitives et performantes avec une attention particulière aux détails.</p>
-                        <a href="#mes-projets-recents">Voir mes projets</a>
-                    </article>
-                    <img src="img/pers2.jpg" alt="personne" id="personne"> <!-- Ajouter une photo de moi -->
-                </div>
+        <section class="principale">
+            <div class="container">
+                <article>
+                    <h1>Lindsay Ramassy</h1>
+                    <p>En cours de formation pour devenir Développeuse Web Front-End & Designer UI/UX</p>
+                    <p>Je crée des expériences web élégantes, intuitives et performantes avec une attention particulière aux détails.</p>
+                    <a href="#mes-projets-recents">Voir mes projets</a>
+                </article>
+                <img src="img/pers2.jpg" alt="personne"> <!-- Ajouter une photo de moi -->
             </div>
         </section>
 
@@ -77,12 +75,13 @@
             </div>
         </section>
 
-        <section id="mes-projets-recents">
+        <section class="mes-projets-recents">
             <div class="container">
-                <h2>Mes projets récents</h2>
-                <p>Découvrez une sélection de mes travaux récents qui démontrent mes compétences en développement web et design d'interface.</p>
+                <div class="content">
+                    <h2>Mes projets récents</h2>
+                    <p>Découvrez une sélection de mes travaux récents qui démontrent mes compétences en développement web et design d'interface.</p>
+                </div>
                 <div id="cards">
-                    <a href="#">
                         <article class="card">
                             <img src="img/projet1.PNG" alt="projet Home Key">
                             <div class="info-zone">
@@ -93,11 +92,9 @@
                                     <li>CSS3</li>
                                     <li>Responsive</li>
                                 </ul>
-                                <p class="link">Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></p>
+                                <a href="projects.html">Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </article>
-                    </a>
-                    <a href="#">
                         <article class="card">
                             <img src="img/projet3.PNG" alt="projet John Doe">
                             <div class="info-zone">
@@ -108,10 +105,9 @@
                                     <li>CSS3</li>
                                     <li>Responsive</li>
                                 </ul>
-                                <p class="link">Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></p>
+                                <a href="projects.html">Voir mon projet <i class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </article>
-                    </a>
                 </div>
                 <button><a href="projects.html">Voir tous les projets</a></button>
             </div>
