@@ -5,7 +5,6 @@
 
 *{
     margin: 0;
-    /* box-sizing: border-box; */
     scroll-behavior: smooth;
 }
 
@@ -156,52 +155,52 @@ main{
         background-image:linear-gradient(90deg, rgba(252, 208, 161, 0.5) 0%, rgba(252, 208, 161, 0.4) 50%, rgba(252, 208, 161, 0.2) 100%),url("../img/pexels-olha-ruskykh-5984630.jpg");
         background-size: cover;
         
-            .container{
+        .container{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            height: 1040px;
+            padding: 0 20px;            
+
+            article{
                 display: grid;
-                align-items: center;
-                justify-items: center;
-                grid-template-columns: 1fr 1fr;
-                gap: 50px;
-                height: 1040px;
-                padding: 0 20px;            
+                gap: 25px;
 
-                article{
-                    display: grid;
-                    gap: 25px;
-
-                    h1{
-                        font-family:var(--titlefont); 
-                        font-weight: 700;
-                        font-size: 60px;
-                        color: var(--black);
-                    }
-                    
-                    p{
-                        color: var(--black);
-                    } 
-
-                    a{
-                        background-color: var(--sauge);
-                        width: fit-content;
-                        padding: 12px 28px;
-                        border-radius: 5px;
-                        color: var(--white);
-                        transition: all 0.2s ease-in-out;
-
-                        &:hover{
-                            background-color: var(--foret);
-                            transform: scale(1.02);
-                            transition: all 0.2s ease-in-out;
-                        }
-                    }               
+                h1{
+                    font-family:var(--titlefont); 
+                    font-weight: 700;
+                    font-size: 60px;
+                    color: var(--black);
                 }
+                    
+                p{
+                    color: var(--black);
+                } 
+
+                a{
+                    background-color: var(--sauge);
+                    width: fit-content;
+                    padding: 12px 28px;
+                    border-radius: 5px;
+                    color: var(--white);
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover{
+                        background-color: var(--foret);
+                        transform: scale(1.02);
+                        transition: all 0.2s ease-in-out;
+                    }
+                }               
             }
 
             img{
-                max-width: 500px;
+                max-width: 400px;
                 border-radius: 100%;
+                border: 3px solid var(--sauge);
             }
-            /* Attention aux dimensions de l'image */
+        }
     }
 
 /* Page about.html */
@@ -225,6 +224,24 @@ main{
 
             #parcours_competences{
                 article{
+                    a{
+                        color: var(--white);
+                        transition: all 0.2s ease-in-out;
+
+                        i{
+                            color: var(--white);
+                        }
+
+                        &:hover{
+                            color: var(--foret);
+                            transition: all 0.2s ease-in-out;
+
+                            i{
+                                color: var(--foret);
+                            }
+                        }
+                    }
+
                     .mes-competences{
                         grid-template-columns: 1fr 1fr 1fr;
 
@@ -316,7 +333,8 @@ main{
                 gap: 20px;
 
                 h3{
-                    margin: 20px;
+                    text-align: center;
+                    margin: 20px 0;
                 }
 
                 a{
@@ -326,14 +344,19 @@ main{
                     gap: 15px;
                     transition: all 0.2s ease-in-out;
 
-                    &:hover{
-                        color: var(--foret);
-                        transition: all 0.2s ease-in-out;
-                    }
-
                     i{
                         color: var(--sauge);
                         font-size: 16px;
+                    }
+
+                    &:hover{
+                        color: var(--foret);
+                        transform: scale(1.02);
+                        transition: all 0.2s ease-in-out;
+                        
+                        i{
+                            color: var(--foret);
+                        }
                     }
                 }
 
@@ -378,76 +401,75 @@ main{
                 padding: 30px 0;
                 border-radius: 10px;
                     
-                    .card{
-                        background-color: var(--white);
-                        border-radius: 10px;
-                        display: grid;
-                        gap: 10px;
-                        box-shadow: 9px 8px 5px #80808047;
-                        height: 100%;
-                        overflow: hidden;
+                .card{
+                    background-color: var(--white);
+                    border-radius: 10px;
+                    display: grid;
+                    gap: 10px;
+                    box-shadow: 9px 8px 5px #80808047;
+                    height: 100%;
+                    overflow: hidden;
 
+                    img{
+                        height: 256px;
+                         border-radius:  10px 10px 0 0;
+                        transition:all 0.2s ease-in-out;
+                    }
+
+                    &:hover{
                         img{
-                            height: 256px;
-                            border-radius:  10px 10px 0 0;
+                            transform: scale(1.02);
                             transition:all 0.2s ease-in-out;
                         }
+                    }
 
-                        &:hover{
-                                img{
-                                    transform: scale(1.02);
-                                    transition:all 0.2s ease-in-out;
-                                }
-                            }
+                    .info-zone{
+                        display: grid;
+                        justify-items: flex-start;
+                        gap: 13px;
+                        padding: 10px;
 
-                        .info-zone{
-                            display: grid;
-                            justify-items: flex-start;
-                            gap: 13px;
-                            padding: 10px;
-
-                            h3{
-                                text-align: justify;
-                                color: var(--sauge);
-                            } 
+                        h3{
+                            text-align: justify;
+                            color: var(--sauge);
+                        } 
                             
-                            p{
-                                text-align: justify;
-                                color: var(--black);
-                                font-size: 16px;
-                            }
+                        p{
+                            text-align: justify;
+                            color: var(--black);
+                            font-size: 16px;
+                        }
 
-                            ul{
-                                list-style: none;
-                                display: flex;
-                                gap: 20px;
+                        ul{
+                            list-style: none;
+                            display: flex;
+                            gap: 20px;
+                            flex-wrap: wrap;
 
-                                li{
-                                    background-color: var(--sauge);
-                                    padding: 7px;
-                                    border-radius: 4px;
-                                    color:var(--white);
-                                    font-family: var(--primaryfont);  
-                                    font-weight: 400;
-                                    font-size: 18px;
-                                }
-                            }
-
-                            a{
-                                color: var(--sauge);
-                                font-weight: 700;
-                                transition: all 0.2s ease-in-out;
-
-                                &:hover{
-                                    transform: scale(1.02);
-                                    color: var(--foret);
-                                }
+                            li{
+                                background-color: var(--sauge);
+                                padding: 7px;
+                                border-radius: 4px;
+                                color:var(--white);
+                                font-family: var(--primaryfont);  
+                                font-weight: 400;
+                                font-size: 18px;
                             }
                         }
-                        
+
+                        a{
+                            color: var(--sauge);
+                            font-weight: 700;
+                            transition: all 0.2s ease-in-out;
+
+                            &:hover{
+                                transform: scale(1.02);
+                                color: var(--foret);
+                                transition: all 0.2s ease-in-out;
+                            }
+                        }
                     }
-                    
-                
+                }
             }
 
             button{
@@ -481,6 +503,14 @@ main{
         margin: 0;
 
         .container{
+            .content{
+                h1{
+                    font-weight: 700;
+                    font-size: 36px;
+                    margin: 23px 0;
+                }
+            }
+
             #cards{
                 .card{
                     background-color: var(--sauge);
@@ -488,8 +518,10 @@ main{
 
                     .info-zone{
 
-                        h3{
+                        h2{
                             color: var(--black);
+                            font-size: 24px;
+                            font-weight: 600;
                         } 
                             
                         p{
@@ -524,11 +556,11 @@ main{
     .contact{
         text-align: center;
         max-width: 670px;
-        margin: auto;
+        margin: 20px auto;
         padding: 60px 15px;
 
         h2{
-            margin: 30px 0;
+            margin: 23px 0;
         }
 
         form{
@@ -566,7 +598,6 @@ main{
                     }
                 }
             }
-        
 
             div{
                 label{
@@ -574,7 +605,6 @@ main{
                     font-size: 14px;
                     font-weight: 400;
                 }
-                
             }
 
             button{
@@ -591,6 +621,16 @@ main{
             }
         }
     }
+
+/* Page contact.html */
+    .contact-me{
+        h1{
+            font-weight: 700;
+            font-size: 36px;
+            margin: 23px 0;
+        }
+    }
+/* Fin page contact.html */
 
 /* Pages plantint.html et johndoe.html */
     .projet-details{
@@ -668,8 +708,8 @@ main{
             }
         }
     }
-}
 /* Fin pages plantint.html et johndoe.html */
+}
 
 /* Footer */
 footer{
@@ -721,6 +761,13 @@ footer{
 /* Tablette (1024px jusqu'à 768px) */
 @media screen and (max-width:1024px){
     main{
+        .propos{
+            #parcours_competences{
+                grid-template-columns: 1fr;
+            }
+        }
+
+/* Pages plantint.html et johndoe.html */
         .projet-details{
             >div{
                 grid-template-columns: 1fr;
@@ -732,6 +779,7 @@ footer{
                 grid-template-columns: 1fr 1fr;
             }
         }
+/* Fin pages plantint.html et johndoe.html */
     }
 }
 
@@ -767,7 +815,7 @@ footer{
                 }                
             }
         }
-        /* Page about.html */
+/* Page about.html */
         .about-sect-2{
             .container{
                 #parcours_competences {
@@ -787,12 +835,10 @@ footer{
                 grid-template-columns: 1fr;
             }
         }
-        /* Fin page about.html */
+/* Fin page about.html */
 
         .propos{
             #parcours_competences{
-                grid-template-columns: 1fr;
-
                 article{
                     .mes-competences{
                         grid-template-columns: 1fr 1fr;
@@ -805,6 +851,7 @@ footer{
             .container{
                 #cards{
                     grid-template-columns: 1fr;
+
                     a{
                         .card{
                             .info-zone{
@@ -815,7 +862,6 @@ footer{
                             }
                         }
                     }
-                    
                 }
             }
         }
@@ -831,12 +877,14 @@ footer{
                 }
             }
         }
-
+        
+/* Pages plantint.html et johndoe.html */
         .apercu{
             div{
                 flex-direction: column;
             }
         }
+/* Fin pages plantint.html et johndoe.html */
     }
 
     footer{
