@@ -177,7 +177,13 @@ main{
                     
                 p{
                     color: var(--black);
-                } 
+                }
+                
+                #sous-titre{
+                    font-family: var(--titlefont);
+                    font-size: 24px;
+                    font-weight: 600;
+                }
 
                 a{
                     background-color: var(--sauge);
@@ -412,7 +418,7 @@ main{
 
                     img{
                         height: 256px;
-                         border-radius:  10px 10px 0 0;
+                        border-radius:  10px 10px 0 0;
                         transition:all 0.2s ease-in-out;
                     }
 
@@ -752,8 +758,6 @@ footer{
                     color:var(--white);
                 }
             }
-            
-
         }
     }
     
