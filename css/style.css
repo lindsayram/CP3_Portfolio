@@ -875,7 +875,7 @@ footer{
                 #champ{
                     grid-template-columns: 1fr;
 
-                    #message{
+                    #texte{
                         grid-column: 1/1;
                     }
                 }
